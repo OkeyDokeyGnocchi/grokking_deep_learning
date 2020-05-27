@@ -6,7 +6,7 @@ learn_rate = 0.1
 for i in range(20):
     pred = weight * input
     error = (pred - goal_pred) ** 2
-    delta = (pred - goal_pred)
+    delta = (pred - goal_pred) * input
     weight -= (delta * learn_rate)
 
     print(f'Error: {error} ... Prediction: {pred}')
